@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{61BCA7B9-F336-45FB-92FA-E16699AC1FB9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{7D0F7589-94C4-47B1-96D9-F3E8AD38770B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{6BB67E00-DA7E-46CD-AA8E-6E972AE7EB07}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CrossCutting", "CrossCutting", "{D4E41DB7-4FFC-44DC-BDAE-3C5E475B59E0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{157C2F06-4E24-49DE-9BA7-8E7A69DC7CB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcademyLover.Api", "src\AcademyLover.Api\AcademyLover.Api.csproj", "{255BE3FC-21F5-42D3-B558-826462F68115}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcademyLover.Domain", "src\AcademyLover.Domain\AcademyLover.Domain.csproj", "{45724995-BA0D-4DB6-AE8D-3B54B392A1FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcademyLover.Infra.CrossCutting.IoC", "src\AcademyLover.Infra.CrossCutting.IoC\AcademyLover.Infra.CrossCutting.IoC.csproj", "{EB0F5AAE-1ABB-4307-9C55-09E8CD65C8FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcademyLover.Infra.Data.DB", "src\AcademyLover.Infra.Data.DB\AcademyLover.Infra.Data.DB.csproj", "{E599603B-5BEC-46D2-8C3E-7642B6504CA2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{255BE3FC-21F5-42D3-B558-826462F68115}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{255BE3FC-21F5-42D3-B558-826462F68115}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{255BE3FC-21F5-42D3-B558-826462F68115}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{255BE3FC-21F5-42D3-B558-826462F68115}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45724995-BA0D-4DB6-AE8D-3B54B392A1FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45724995-BA0D-4DB6-AE8D-3B54B392A1FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45724995-BA0D-4DB6-AE8D-3B54B392A1FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45724995-BA0D-4DB6-AE8D-3B54B392A1FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB0F5AAE-1ABB-4307-9C55-09E8CD65C8FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB0F5AAE-1ABB-4307-9C55-09E8CD65C8FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB0F5AAE-1ABB-4307-9C55-09E8CD65C8FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB0F5AAE-1ABB-4307-9C55-09E8CD65C8FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E599603B-5BEC-46D2-8C3E-7642B6504CA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E599603B-5BEC-46D2-8C3E-7642B6504CA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E599603B-5BEC-46D2-8C3E-7642B6504CA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E599603B-5BEC-46D2-8C3E-7642B6504CA2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D4E41DB7-4FFC-44DC-BDAE-3C5E475B59E0} = {6BB67E00-DA7E-46CD-AA8E-6E972AE7EB07}
+		{157C2F06-4E24-49DE-9BA7-8E7A69DC7CB1} = {6BB67E00-DA7E-46CD-AA8E-6E972AE7EB07}
+		{255BE3FC-21F5-42D3-B558-826462F68115} = {61BCA7B9-F336-45FB-92FA-E16699AC1FB9}
+		{45724995-BA0D-4DB6-AE8D-3B54B392A1FC} = {7D0F7589-94C4-47B1-96D9-F3E8AD38770B}
+		{EB0F5AAE-1ABB-4307-9C55-09E8CD65C8FE} = {D4E41DB7-4FFC-44DC-BDAE-3C5E475B59E0}
+		{E599603B-5BEC-46D2-8C3E-7642B6504CA2} = {157C2F06-4E24-49DE-9BA7-8E7A69DC7CB1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D1E10A57-34C9-415C-B42F-FEFCFE1ABE16}
+	EndGlobalSection
+EndGlobal
