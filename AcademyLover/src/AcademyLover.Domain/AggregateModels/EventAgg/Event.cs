@@ -1,4 +1,5 @@
 ﻿using AcademyLover.Domain.AggregateModels.ArticleAgg;
+using AcademyLover.Domain.AggregateModels.EventAgg.Entities;
 using AcademyLover.Domain.AggregateModels.UserAgg;
 using AcademyLover.Domain.Enums;
 using AcademyLover.Domain.SharedKernel.Entities;
@@ -13,7 +14,7 @@ namespace AcademyLover.Domain.AggregateModels.EventAgg
         public Event()
         {
             Articles = new HashSet<Article>();
-            Subscribers = new HashSet<Person>();
+            Subscribers = new HashSet<EventPerson>();
         }
 
         public string Title { get; set; }
@@ -25,7 +26,8 @@ namespace AcademyLover.Domain.AggregateModels.EventAgg
         public EventSituation Situation { get; set; }
 
         public ICollection<Article> Articles { get; set; }
-        public ICollection<Person> Subscribers { get; set; }
+        public ICollection<EventPerson> Subscribers { get; set; }
+        public Cancellation Cancellation { get; set; }
 
         public Dictionary<int, Article> GenarateRanking()
         {

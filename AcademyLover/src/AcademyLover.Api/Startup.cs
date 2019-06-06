@@ -43,17 +43,9 @@ namespace AcademyLover.Api
             }
 
             app.UseMvc();
-            InitializeDb(app);
+
+            app.InitializeDb();
         }
 
-        private void InitializeDb(IApplicationBuilder app)
-        {
-            using (var serviceScope = app.ApplicationServices.GetService<IServiceScopeFactory>().CreateScope())
-            {
-                var context = serviceScope.ServiceProvider.GetRequiredService<DataContext>();
-                context.Database.EnsureCreated();
-                //context.Database.EnsureDeleted();
-            }
-        }
     }
 }

@@ -44,8 +44,6 @@ namespace AcademyLover.Infra.Data.DB.Mapping
             builder.Property(x => x.Date)
                 .IsRequired()
                 .HasColumnName("Date");
-
-            builder.Ignore(x => x.Subscribers);
                 
         }
     }

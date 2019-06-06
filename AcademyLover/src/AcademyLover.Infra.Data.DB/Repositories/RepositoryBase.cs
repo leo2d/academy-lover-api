@@ -38,20 +38,9 @@ namespace AcademyLover.Infra.Data.DB.Repositories
 
         public async Task Create(T entity)
         {
-            try
-            {
-                _dbCobtext.Set<T>().Add(entity);
+            _dbCobtext.Set<T>().Add(entity);
 
-                _dbCobtext.SaveChanges();
-                // await SaveAsync();
-
-            }
-            catch (Exception ex)
-            {
-
-                throw;
-            }
-
+            await SaveAsync();
         }
 
         public async Task Update(T entity)

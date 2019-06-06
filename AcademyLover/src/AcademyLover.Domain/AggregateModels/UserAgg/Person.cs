@@ -1,5 +1,7 @@
 ﻿using AcademyLover.Domain.AggregateModels.ArticleAgg;
+using AcademyLover.Domain.AggregateModels.ArticleAgg.Entities;
 using AcademyLover.Domain.AggregateModels.EventAgg;
+using AcademyLover.Domain.AggregateModels.EventAgg.Entities;
 using AcademyLover.Domain.Enums;
 using AcademyLover.Domain.SharedKernel.Entities;
 using AcademyLover.Domain.SharedKernel.Interfaces;
@@ -12,8 +14,9 @@ namespace AcademyLover.Domain.AggregateModels.UserAgg
     {
         public Person()
         {
-           // Events = new HashSet<Event>();
+            Events = new HashSet<EventPerson>();
             Articles = new HashSet<Article>();
+            Evaluations = new HashSet<Evaluation>();
         }
 
         public string Password { get; set; }
@@ -27,6 +30,7 @@ namespace AcademyLover.Domain.AggregateModels.UserAgg
         public string School { get; set; }
 
         public ICollection<Article> Articles { get; set; }
-        //public ICollection<Event> Events { get; set; }
+        public ICollection<Evaluation> Evaluations { get; set; }
+        public ICollection<EventPerson> Events { get; set; }
     }
 }

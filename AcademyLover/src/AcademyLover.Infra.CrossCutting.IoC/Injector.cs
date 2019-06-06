@@ -1,4 +1,6 @@
-﻿using AcademyLover.Domain.AggregateModels.EventAgg.Interfaces.Repositories;
+﻿using AcademyLover.Domain.AggregateModels.ArticleAgg.Interfaces.Repositories;
+using AcademyLover.Domain.AggregateModels.EventAgg.Interfaces.Repositories;
+using AcademyLover.Domain.AggregateModels.UserAgg.Interfaces.Repositories;
 using AcademyLover.Infra.Data.DB.Repositories;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
@@ -10,6 +12,8 @@ namespace AcademyLover.Infra.CrossCutting.IoC
         public static void RegisterServices(IHostingEnvironment env, IServiceCollection services)
         {
             services.AddScoped<IEventRepository, EventRepository>();
+            services.AddScoped<IPersonRepository, PersonRepository>();
+            services.AddScoped<IArticleRepository, ArticleRepository>();
         }
     }
 }
