@@ -14,6 +14,7 @@ namespace AcademyLover.Infra.Data.DB.Mapping
 
             builder.Property(x => x.Id)
                 .IsRequired()
+                .ValueGeneratedOnAdd()
                 .HasColumnName("Id");
 
             builder.Property(x => x.Title)

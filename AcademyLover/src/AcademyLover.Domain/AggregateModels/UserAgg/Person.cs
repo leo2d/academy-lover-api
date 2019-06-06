@@ -12,7 +12,7 @@ namespace AcademyLover.Domain.AggregateModels.UserAgg
     {
         public Person()
         {
-            Events = new HashSet<Event>();
+           // Events = new HashSet<Event>();
             Articles = new HashSet<Article>();
         }
 
@@ -27,6 +27,6 @@ namespace AcademyLover.Domain.AggregateModels.UserAgg
         public string School { get; set; }
 
         public ICollection<Article> Articles { get; set; }
-        public ICollection<Event> Events { get; set; }
+        //public ICollection<Event> Events { get; set; }
     }
 }

@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AcademyLover.Domain.AggregateModels.EventAgg;
+using AcademyLover.Domain.AggregateModels.EventAgg.Interfaces.Repositories;
+using AcademyLover.Domain.Enums;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,10 +15,38 @@ namespace AcademyLover.Api.Controllers
     [AllowAnonymous]
     public class ValuesController : ControllerBase
     {
+        private IEventRepository _eventRepository;
+        public ValuesController(IEventRepository eventRepository)
+        {
+            _eventRepository = eventRepository;
+        }
+
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
+            try
+            {
+                var eventTest = new Event()
+                {
+                    Date = DateTime.Now,
+                    Local = "ali",
+                    Responsible = "cornildo",
+                    Title = "tituloso",
+                    Description ="asd",
+                    Situation = EventSituation.OPEN,
+                    State = "Rsds",
+                    
+                };
+
+                _eventRepository.Create(eventTest);
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+
             return new string[] { "value1", "value2" };
         }
 
@@ -23,6 +54,8 @@ namespace AcademyLover.Api.Controllers
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id)
         {
+            var result = _eventRepository.FindAll().ToList();
+
             return "value";
         }
 
