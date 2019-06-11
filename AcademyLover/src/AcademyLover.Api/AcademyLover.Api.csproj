@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="2.2.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.2.4" />
@@ -24,6 +25,7 @@
   <ItemGroup>
     <ProjectReference Include="..\AcademyLover.Infra.CrossCutting.IoC\AcademyLover.Infra.CrossCutting.IoC.csproj" />
     <ProjectReference Include="..\AcademyLover.Infra.Data.DB\AcademyLover.Infra.Data.DB.csproj" />
+    <ProjectReference Include="..\AcademyLover.Models\AcademyLover.Models.csproj" />
   </ItemGroup>
 
 </Project>

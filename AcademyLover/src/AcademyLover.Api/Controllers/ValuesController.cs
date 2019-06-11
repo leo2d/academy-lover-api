@@ -13,7 +13,7 @@ namespace AcademyLover.Api.Controllers
     [Route("api/[controller]")]
     [ApiController]
     [AllowAnonymous]
-    public class ValuesController : ControllerBase
+    public class ValuesController : Controller
     {
         private IEventRepository _eventRepository;
         public ValuesController(IEventRepository eventRepository)
@@ -33,10 +33,10 @@ namespace AcademyLover.Api.Controllers
                     Local = "ali",
                     Responsible = "cornildo",
                     Title = "tituloso",
-                    Description ="asd",
+                    Description = "asd",
                     Situation = EventSituation.OPEN,
                     State = "Rsds",
-                    
+
                 };
 
                 _eventRepository.Create(eventTest);
@@ -52,11 +52,11 @@ namespace AcademyLover.Api.Controllers
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        public ActionResult<object> Get(int id)
         {
             var result = _eventRepository.FindAll().ToList();
 
-            return "value";
+            return Ok(result.FirstOrDefault());
         }
 
         // POST api/values
