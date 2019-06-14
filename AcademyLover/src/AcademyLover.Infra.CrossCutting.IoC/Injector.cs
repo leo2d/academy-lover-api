@@ -21,6 +21,8 @@ namespace AcademyLover.Infra.CrossCutting.IoC
 
             #region services
             services.AddScoped<IUserAppService, UserAppService>();
+            services.AddScoped<IEventAppService, EventAppService>();
+            services.AddScoped<IArticleAppService, ArticleAppService>();
 
             #endregion
         }
