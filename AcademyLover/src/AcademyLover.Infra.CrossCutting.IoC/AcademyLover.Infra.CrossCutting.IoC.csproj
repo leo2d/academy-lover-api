@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AcademyLover.Application\AcademyLover.Application.csproj" />
     <ProjectReference Include="..\AcademyLover.Domain\AcademyLover.Domain.csproj" />
     <ProjectReference Include="..\AcademyLover.Infra.Data.DB\AcademyLover.Infra.Data.DB.csproj" />
   </ItemGroup>

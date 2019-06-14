@@ -1,4 +1,5 @@
-﻿using AcademyLover.Domain.AggregateModels.UserAgg.Interfaces;
+﻿using AcademyLover.Application.Interfaces;
+using AcademyLover.Domain.AggregateModels.UserAgg.Interfaces;
 using AcademyLover.Models.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -12,9 +13,9 @@ namespace AcademyLover.Api.Controllers
     [AllowAnonymous]
     public class LoginController : Controller
     {
-        private IUserService _userService;
+        private IUserAppService _userService;
 
-        public LoginController(IUserService userService)
+        public LoginController(IUserAppService userService)
         {
             _userService = userService;
         }

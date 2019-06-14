@@ -2,12 +2,14 @@
 using AcademyLover.Models.ViewModels;
 using System.Threading.Tasks;
 
-namespace AcademyLover.Domain.AggregateModels.UserAgg.Interfaces
+namespace AcademyLover.Application.Interfaces
 {
-    public interface IUserService
+    public interface IUserAppService
     {
         Task<Token> DoLogin(LoginViewModel loginViewModel);
         Task DoLogout(string token);
+
+        Task CreateNewUser(UserViewModel userViewModel);
 
     }
 }

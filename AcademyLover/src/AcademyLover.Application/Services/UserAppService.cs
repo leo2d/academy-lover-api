@@ -1,20 +1,37 @@
-﻿using AcademyLover.Domain.AggregateModels.UserAgg.Entities;
-using AcademyLover.Domain.AggregateModels.UserAgg.Interfaces;
+﻿using AcademyLover.Application.Interfaces;
+using AcademyLover.Domain.AggregateModels.UserAgg;
+using AcademyLover.Domain.AggregateModels.UserAgg.Entities;
 using AcademyLover.Domain.AggregateModels.UserAgg.Interfaces.Repositories;
 using AcademyLover.Models.ViewModels;
+using AutoMapper;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace AcademyLover.Domain.AggregateModels.UserAgg.Services
+namespace AcademyLover.Application.Services
 {
-    public class UserService : IUserService
+    public class UserAppService : IUserAppService
     {
+        private readonly IMapper _mapper;
         private readonly IPersonRepository _personRepository;
-        public UserService(IPersonRepository personRepository)
+        public UserAppService(IPersonRepository personRepository, IMapper mapper)
         {
             _personRepository = personRepository;
+            _mapper = mapper;
+        }
+
+        public async Task CreateNewUser(UserViewModel userViewModel)
+        {
+            try
+            {
+                var user = _mapper.Map<Person>(userViewModel);
+
+                await _personRepository.Create(user);
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
         }
 
         public async Task<Token> DoLogin(LoginViewModel loginViewModel)

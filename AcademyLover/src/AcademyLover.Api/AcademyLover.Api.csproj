@@ -23,6 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AcademyLover.Application\AcademyLover.Application.csproj" />
     <ProjectReference Include="..\AcademyLover.Infra.CrossCutting.IoC\AcademyLover.Infra.CrossCutting.IoC.csproj" />
     <ProjectReference Include="..\AcademyLover.Infra.Data.DB\AcademyLover.Infra.Data.DB.csproj" />
     <ProjectReference Include="..\AcademyLover.Models\AcademyLover.Models.csproj" />
