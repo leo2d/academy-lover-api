@@ -1,6 +1,5 @@
 ﻿using AcademyLover.Domain.AggregateModels.ArticleAgg;
 using AcademyLover.Domain.AggregateModels.EventAgg.Entities;
-using AcademyLover.Domain.AggregateModels.UserAgg;
 using AcademyLover.Domain.Enums;
 using AcademyLover.Domain.SharedKernel.Entities;
 using System;
